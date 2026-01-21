@@ -142,16 +142,22 @@ UI enhancements
 Backend API integration
 
 
+### ✅ I — Interface Segregation Principle (ISP)
+
+Interfaces are kept small and focused.  
+Clients depend only on the methods they use.
+
+Example:
+- EmailNotification → sendEmail()
+- SmsNotification → sendSms()
+
+This avoids fat interfaces and unnecessary dependencies.
+
 ---
 
-##  What to do now
+###  L — Liskov Substitution Principle (LSP)
 
-1. Open `README.md`
-2. Replace all existing content with the above
-3. Save the file
-4. Run:
+Notification implementations can be substituted without affecting application behavior.
 
-```bash
-git add README.md
-git commit -m "docs: add SOLID architecture README"
-git push
+Switching between Email and SMS notifications works without breaking functionality, satisfying LSP.
+

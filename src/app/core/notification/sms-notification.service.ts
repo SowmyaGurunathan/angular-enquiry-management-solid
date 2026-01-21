@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
-import { AppNotification } from './notification';
+import { SmsNotification } from './notification.interface';
 
 @Injectable()
-export class SmsNotificationService implements AppNotification {
-  send(message: string): void {
+export class SmsNotificationService implements SmsNotification {
+  sendSms(message: string): void {
     console.log('📱 SMS notification:', message);
   }
 }

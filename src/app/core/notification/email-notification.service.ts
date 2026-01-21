@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
-import { AppNotification } from './notification';
+import { EmailNotification } from './notification.interface';
 
 @Injectable()
-export class EmailNotificationService implements AppNotification {
-  send(message: string): void {
+export class EmailNotificationService implements EmailNotification {
+  sendEmail(message: string): void {
     console.log('📧 Email notification:', message);
   }
 }
